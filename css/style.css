@@ -1,0 +1,291 @@
+/* Estilos generales del body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333333;
+}
+
+/* Cabecera: fondo oscuro, texto blanco y centrado */
+header {
+    background-color: #1a1a2e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Título principal de la cabecera */
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Subtítulo de la cabecera */
+header p {
+    margin: 5px 0 15px 0;
+    color: #aaaaaa;
+}
+
+/* Botón Menú */
+#btnMenu {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Color del botón al pasar el ratón */
+#btnMenu:hover {
+    background-color: #005fa3;
+}
+
+/* Menú desplegable: oculto por defecto */
+#menuNav {
+    display: none;
+    background-color: #16213e;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Cuando JS le añade la clase activo, se muestra */
+#menuNav.activo {
+    display: block;
+}
+
+/* Cada enlace del menú en su propia línea */
+#menuNav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-bottom: 1px solid #0d1526;
+    text-align: left;
+}
+
+/* Color al pasar el ratón por un enlace */
+#menuNav a:hover {
+    background-color: #0077cc;
+    color: white;
+}
+
+/* Secciones: espaciado y ancho máximo centrado */
+section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Títulos de cada sección con línea azul debajo */
+section h2 {
+    color: #1a1a2e;
+    border-bottom: 2px solid #00d4ff;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+/* Imagen de la sección inicio */
+#inicio img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+/* Catálogo: contenedor flexible en fila */
+.catalogo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Tarjeta individual de cada juego */
+.juego-card {
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Imagen dentro de cada tarjeta */
+.juego-card img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Título del juego dentro de la tarjeta */
+.juego-card h3 {
+    font-size: 1rem;
+    margin: 10px 0 5px 0;
+    color: #1a1a2e;
+}
+
+/* Texto del género dentro de la tarjeta */
+.juego-card p {
+    margin: 3px 0;
+    font-size: 0.9rem;
+    color: #666666;
+}
+
+/* Precio del juego en azul y negrita */
+.precio {
+    color: #0077cc !important;
+    font-weight: bold;
+    font-size: 1.1rem !important;
+}
+
+/* Sección Calculadora: caja blanca centrada */
+#calculadora {
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+/* Etiquetas label de ambos formularios */
+#formCalculadora label,
+#formContacto label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #1a1a2e;
+}
+
+/* Campos de entrada de ambos formularios */
+#formCalculadora select,
+#formCalculadora input,
+#formContacto select,
+#formContacto input,
+#formContacto textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Botón calcular */
+#btnCalcular {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Color del botón calcular al pasar el ratón */
+#btnCalcular:hover {
+    background-color: #005fa3;
+}
+
+/* Botón limpiar */
+#btnLimpiar {
+    margin-top: 8px;
+    padding: 8px 20px;
+    background-color: #aaaaaa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Color del botón limpiar al pasar el ratón */
+#btnLimpiar:hover {
+    background-color: #888888;
+}
+
+/* Caja donde aparece el resultado del cálculo */
+#resultado {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f0f8ff;
+    border: 1px solid #00d4ff;
+    border-radius: 5px;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* Sección Contacto: caja blanca centrada */
+#contacto {
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+/* Caja de texto del formulario de contacto */
+#formContacto textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Botón enviar del contacto */
+#formContacto button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #1a1a2e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Color del botón enviar al pasar el ratón */
+#formContacto button:hover {
+    background-color: #0077cc;
+}
+
+/* Mensaje de confirmación tras enviar el formulario */
+#confirmacion {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Pie de página */
+footer {
+    background-color: #1a1a2e;
+    color: #aaaaaa;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Responsive: ajustes para móvil */
+@media (max-width: 600px) {
+
+    /* Tarjetas ocupan todo el ancho en móvil */
+    .juego-card {
+        width: 100%;
+    }
+
+    /* Título más pequeño en móvil */
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
