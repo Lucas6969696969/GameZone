@@ -1,6 +1,5 @@
 ﻿document.addEventListener('DOMContentLoaded', function() {
 
-    /* var: forma antigua de declarar variables (hoy se recomienda let o const) */
     var btnMenu = document.getElementById('btnMenu');
     var menuNav = document.getElementById('menuNav');
 
