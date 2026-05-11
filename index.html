@@ -1,23 +1,19 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameZone</title>
-    <!-- Enlace al CSS que está dentro de la carpeta css -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Cabecera: contiene el título y el menú -->
     <header>
         <h1>GameZone</h1>
         <p>Tu tienda de videojuegos de confianza</p>
 
-        <!-- Botón que abre y cierra el menú -->
         <button id="btnMenu">Menu ▼</button>
 
-        <!-- Menú de navegación: oculto por defecto, JS lo muestra al pulsar el botón -->
         <nav id="menuNav">
             <a href="#inicio">Inicio</a>
             <a href="#catalogo">Catalogo</a>
@@ -26,19 +22,16 @@
         </nav>
     </header>
 
-    <!-- Sección Inicio: presentación de la tienda -->
     <section id="inicio">
         <h2>Bienvenido</h2>
         <p>En GameZone encontraras los mejores juegos para PS5, Xbox, Switch y PC.</p>
         <img src="https://kunjgit.github.io/GameZone/loader.gif" alt="videojuegos">
     </section>
 
-    <!-- Sección Catálogo: tarjetas con los juegos disponibles -->
     <section id="catalogo">
         <h2>Catalogo</h2>
         <div class="catalogo-grid">
 
-            <!-- Juego 1 -->
             <div class="juego-card">
                 <img src="https://gaming-cdn.com/images/products/4211/orig/grand-theft-auto-v-enhanced-pc-rockstar-cover.jpg?v=1768236372" alt="GTA 5">
                 <h3>GTA V</h3>
@@ -46,7 +39,6 @@
                 <p class="precio">69,99 €</p>
             </div>
 
-            <!-- Juego 2 -->
             <div class="juego-card">
                 <img src="https://portal.33bits.net/wp-content/uploads/2023/10/spiderman-2-thumb-2023-nueva-img-1280x640.jpg" alt="Spiderman 2">
                 <h3>Marvel Spiderman 2</h3>
@@ -54,7 +46,6 @@
                 <p class="precio">59,99 €</p>
             </div>
 
-            <!-- Juego 3 -->
             <div class="juego-card">
                 <img src="https://zeldacentral.com/wp-content/uploads/2025/03/Tears-of-the-Kingdom-wallpaper-1024x576.jpg" alt="Zelda">
                 <h3>Zelda Tears of the Kingdom</h3>
@@ -62,7 +53,6 @@
                 <p class="precio">59,99 €</p>
             </div>
 
-            <!-- Juego 4 -->
             <div class="juego-card">
                 <img src="https://gaming-cdn.com/images/products/19691/616x353/ea-sports-fc-26-pc-ea-app-cover.jpg?v=1758868329" alt="FC 26">
                 <h3>EA Sports FC 26</h3>
@@ -73,14 +63,11 @@
         </div>
     </section>
 
-    <!-- Sección Calculadora: formulario para calcular el precio final -->
     <section id="calculadora">
         <h2>Calculadora</h2>
         <p>Calcula el precio total de tu compra con IVA y descuento</p>
 
         <form id="formCalculadora">
-
-            <!-- Selector de juego -->
             <label for="juego">Juego:</label>
             <select id="juego">
                 <option value="">Elige un juego</option>
@@ -90,7 +77,6 @@
                 <option value="49.99">EA Sports FC 26 - 49,99€</option>
             </select>
 
-            <!-- Selector de plataforma -->
             <label for="plataforma">Plataforma:</label>
             <select id="plataforma">
                 <option value="">Elige plataforma</option>
@@ -100,11 +86,9 @@
                 <option value="PC">PC</option>
             </select>
 
-            <!-- Campo de cantidad numérica -->
             <label for="cantidad">Cantidad:</label>
             <input type="number" id="cantidad" min="1" max="10" value="1">
 
-            <!-- Selector de descuento -->
             <label for="descuento">Descuento:</label>
             <select id="descuento">
                 <option value="0">Sin descuento</option>
@@ -113,36 +97,27 @@
                 <option value="15">15%</option>
             </select>
 
-            <!-- Botones del formulario -->
             <button type="submit" id="btnCalcular">Calcular</button>
             <button type="reset" id="btnLimpiar">Limpiar</button>
-
         </form>
 
-        <!-- Aquí aparece el resultado cuando JS hace el cálculo -->
         <div id="resultado"></div>
-
     </section>
 
-    <!-- Sección Contacto: formulario para escribir a la tienda -->
     <section id="contacto">
         <h2>Contacto</h2>
         <p>Si tienes alguna duda escribenos</p>
 
         <form id="formContacto">
-
-            <!-- Campo nombre -->
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" placeholder="Nombre Completo" required>
 
-            <!-- Campo email con validación de formato .com .es etc -->
             <label for="email">Email:</label>
             <input type="email" id="email" placeholder="tu@email.com"
                 pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
                 title="Escribe un email valido con @ y dominio (.com, .es...)"
                 required>
 
-            <!-- Selector de asunto -->
             <label for="asunto">Asunto:</label>
             <select id="asunto">
                 <option value="">Selecciona</option>
@@ -151,25 +126,18 @@
                 <option value="otro">Otro</option>
             </select>
 
-            <!-- Campo mensaje -->
             <label for="mensaje">Mensaje:</label>
             <textarea id="mensaje" placeholder="Escribe aqui tu mensaje" required></textarea>
 
-            <!-- Botón de envío -->
             <button type="submit">Enviar</button>
-
-            <!-- JS escribe aquí el mensaje de confirmación -->
             <p id="confirmacion"></p>
-
         </form>
     </section>
 
-    <!-- PIE DE PÁGINA -->
     <footer>
         <p>GameZone 2026. Lucas Fernández Álvarez</p>
     </footer>
 
-    <!-- Enlace al JS que está dentro de la carpeta js -->
     <script src="js/script.js"></script>
 
 </body>
