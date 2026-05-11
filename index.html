@@ -33,12 +33,13 @@
     </section>
 
     <!-- Sección Catálogo: tarjetas con los juegos disponibles -->
+    <!-- Al hacer clic en una tarjeta JS abre el popup con el gameplay -->
     <section id="catalogo">
         <h2>Catalogo</h2>
         <div class="catalogo-grid">
 
-            <!-- Juego 1 -->
-            <div class="juego-card">
+            <!-- Juego 1: data-gameplay contiene la imagen del gameplay que mostrará el popup -->
+            <div class="juego-card" data-gameplay="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600&q=80" data-nombre="GTA V">
                 <img src="https://gaming-cdn.com/images/products/4211/orig/grand-theft-auto-v-enhanced-pc-rockstar-cover.jpg?v=1768236372" alt="GTA 5">
                 <h3>GTA V</h3>
                 <p>Accion / Mundo abierto</p>
@@ -46,7 +47,7 @@
             </div>
 
             <!-- Juego 2 -->
-            <div class="juego-card">
+            <div class="juego-card" data-gameplay="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=600&q=80" data-nombre="Marvel Spiderman 2">
                 <img src="https://portal.33bits.net/wp-content/uploads/2023/10/spiderman-2-thumb-2023-nueva-img-1280x640.jpg" alt="Spiderman 2">
                 <h3>Marvel Spiderman 2</h3>
                 <p>Accion / Aventura</p>
@@ -54,7 +55,7 @@
             </div>
 
             <!-- Juego 3 -->
-            <div class="juego-card">
+            <div class="juego-card" data-gameplay="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&q=80" data-nombre="Zelda Tears of the Kingdom">
                 <img src="https://zeldacentral.com/wp-content/uploads/2025/03/Tears-of-the-Kingdom-wallpaper-1024x576.jpg" alt="Zelda">
                 <h3>Zelda Tears of the Kingdom</h3>
                 <p>Aventura / RPG</p>
@@ -62,7 +63,7 @@
             </div>
 
             <!-- Juego 4 -->
-            <div class="juego-card">
+            <div class="juego-card" data-gameplay="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=600&q=80" data-nombre="EA Sports FC 26">
                 <img src="https://gaming-cdn.com/images/products/19691/616x353/ea-sports-fc-26-pc-ea-app-cover.jpg?v=1758868329" alt="FC 26">
                 <h3>EA Sports FC 26</h3>
                 <p>Deportes / Futbol</p>
@@ -71,6 +72,16 @@
 
         </div>
     </section>
+
+    <!-- Popup de gameplay: oculto por defecto, JS lo muestra al clicar una tarjeta -->
+    <div id="popup" class="popup-fondo">
+        <div class="popup-caja">
+            <!-- Botón para cerrar el popup -->
+            <button id="cerrarPopup">✕ Cerrar</button>
+            <h3 id="popupNombre"></h3>
+            <img id="popupImagen" src="" alt="Gameplay">
+        </div>
+    </div>
 
     <!-- Sección Calculadora: formulario para calcular el precio final -->
     <section id="calculadora">
@@ -117,7 +128,10 @@
             <button type="reset" id="btnLimpiar">Limpiar</button>
 
         </form>
+
+        <!-- Aquí aparece el resultado cuando JS hace el cálculo -->
         <div id="resultado"></div>
+
     </section>
 
     <!-- Sección Contacto: formulario para escribir a la tienda -->
@@ -127,6 +141,7 @@
 
         <form id="formContacto">
 
+            <!-- Campo nombre -->
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" placeholder="Nombre Completo" required>
 
@@ -150,19 +165,21 @@
             <label for="mensaje">Mensaje:</label>
             <textarea id="mensaje" placeholder="Escribe aqui tu mensaje" required></textarea>
 
+            <!-- Botón de envío -->
             <button type="submit">Enviar</button>
 
+            <!-- JS escribe aquí el mensaje de confirmación -->
             <p id="confirmacion"></p>
 
         </form>
     </section>
 
-    <!-- PIE DE PÁGINA -->
+    <!-- Pie de página -->
     <footer>
         <p>GameZone 2026. Lucas Fernández Álvarez</p>
     </footer>
 
+    <!-- Enlace al JS que está dentro de la carpeta js -->
     <script src="js/script.js"></script>
-
 </body>
 </html>
